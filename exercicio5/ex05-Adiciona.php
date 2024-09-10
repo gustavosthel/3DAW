@@ -28,8 +28,12 @@
 <html>
 <head>
     <title>Criar Nova Disciplina</title>
+    <link rel="stylesheet" href="Adiciona.css">
 </head>
 <body>
+    <div class="voltar">
+        <button><a href="http://localhost/3DAW/exercicio5/ex05.html">Voltar</a></button>
+    </div>
     <h1>Criar Nova Disciplina</h1>
     <form action="ex05-Adiciona.php" method="POST">
         Nome: <input type="text" name="nome" required>

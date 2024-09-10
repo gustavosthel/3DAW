@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(250, 243, 247);
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: rgb(255, 255, 255);
+}
+
+table {
+    width: 700px;
+    height: 200px;
+}
+
+
+td {
+    text-align: center; /* Centraliza o texto dentro das células */
+    vertical-align: middle; /* Centraliza o texto verticalmente dentro das células */
+
+}
+
+.voltar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.voltar button a {
+    text-decoration: none;
+    color: #000;
+}
