@@ -103,7 +103,7 @@
                 $carga = $coluna[2];
 
                 // Verifica se é a disciplina a ser alterada
-                if (trim($sigla) === trim($siglaAlterar)) {
+                if (($sigla) === ($siglaAlterar)) {
                     // Atualiza os dados, incluindo a sigla
                     $disciplinasAlteradas[] = $novoNome . ";" . $novaSigla . ";" . $novaCarga;
                 } else {
