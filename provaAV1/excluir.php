@@ -15,7 +15,7 @@
             $line = fgets($arqDisc);
             $coluna = explode(";", $line);
     
-            // Verifica se a linha foi dividida corretamente em pelo menos 3 colunas
+            // Verifica se a linha foi dividida corretamente em pelo menos 6 colunas
             if (count($coluna) >= 6) {
                 $id = $coluna[0];
                 $pergunta = $coluna[1];
@@ -35,7 +35,7 @@
     
         fclose($arqDisc);
     
-        // Abrir o arquivo novamente para escrita, sobrescrevendo com disciplinas restantes
+        // Abrir o arquivo novamente para escrita, sobrescrevendo com perguntas restantes
         $arqDisc = fopen("perguntas.txt", "w") or die("Erro ao abrir o arquivo para escrita");
     
         foreach ($perguntasRestantes as $pergunta) {
@@ -45,7 +45,7 @@
         fclose($arqDisc);
     
         // Redireciona para uma página de confirmação ou volta para a página anterior
-        header("Location: listaPerguntas.php"); // Substitua "sucesso.php" pelo nome da página desejada
+        header("Location: listaPerguntas.php"); 
         exit(); // Encerra o script após o redirecionamento
     }
 

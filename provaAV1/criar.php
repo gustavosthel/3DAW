@@ -1,10 +1,7 @@
 <?php
 
-    // Inicializa a variável de mensagem
-    $msg = '';
-
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        // Captura os dados do formulário diretamente, sem verificar isset
+        // Captura os dados do formulário diretamente
         $id = uniqid(); 
         $questao = $_POST["questao"];
         $opcaoA = $_POST["opcaoA"];
@@ -23,10 +20,12 @@
             fclose($arqDisc2);
 
             // Redireciona para uma página de confirmação ou volta para a página anterior
-            header("Location: criarPerguntas.html");
+            header("Location: listaPerguntas.php");
             exit(); // Encerra o script após o redirecionamento
         } else {
-             $msg = "Por favor, preencha todos os campos.";
+            // Redireciona para uma página de confirmação ou volta para a página anterior
+            header("Location: listaPerguntas.php");
+            exit(); // Encerra o script após o redirecionamento
         }
     }
 ?>

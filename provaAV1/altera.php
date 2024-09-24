@@ -13,10 +13,10 @@
         // Abrir o arquivo original para leitura
         $arqDisc = fopen("perguntas.txt", "r") or die("Erro ao abrir o arquivo");
 
-        // Array para armazenar disciplinas alteradas
+        // Array para armazenar perguntas alteradas
         $perguntasAlteradas = [];
 
-        // Ler o arquivo e atualizar a disciplina com a sigla correspondente
+        // Ler o arquivo e atualizar a disciplina com o id correspondente
         while (!feof($arqDisc)) {
             $line = fgets($arqDisc);
             $coluna = explode(";", $line);
@@ -31,12 +31,12 @@
                 $D = $coluna[5];
                 $perguntaCrto = $coluna[6];
 
-                // Verifica se é a disciplina a ser alterada
+                // Verifica se é a pergunta a ser alterada
                 if (($id) === ($idAlterar)) {
-                    // Atualiza os dados, incluindo a sigla
+                    // Atualiza os dados
                     $perguntasAlteradas[] = $id . ";" . $novaPergunta . ";" . $novoA . ";" . $novoB . ";" . $novoC . ";" . $novoD . ";" .  $novoCerto;
                 } else {
-                    // Mantém a disciplina original
+                    // Mantém a pergunta original
                     $perguntasAlteradas[] = $line;
                 }
             }

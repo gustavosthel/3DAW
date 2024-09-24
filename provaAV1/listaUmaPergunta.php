@@ -45,44 +45,50 @@ if (isset($_GET['buscar'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista um Aluno</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
 
-    <!-- Formulário para buscar um aluno pela matricula -->
+    <div class="voltar">
+        <a href="http://localhost/3DAW/provaAV1/menu.html"><button>Voltar</button></a>
+    </div>
+
+    <!-- Formulário para buscar uma pergunta pelo id -->
     <form method="get" class="forms">
         <label>Buscar pergunta pelo ID</label><br>
         <input type="text" name="idBuscar" required>
-        <input type="submit" name="buscar" value="Buscar">
+        <input type="submit" name="buscar" class="bnt-buscar" value="Buscar">
     </form>
 
-    <!-- Tabela de disciplinas encontradas -->
-    <table>
-        <tr>
-            <th>Id</th>
-            <th>Questão</th>
-            <th>Letra A</th>
-            <th>Letra B</th>
-            <th>Letra C</th>
-            <th>Letra D</th>
-            <th>Resposta</th>
-        </tr>
-        <?php if (!empty($perguntaEncontrada)): ?>
-        <tr>
-            <td><?php echo $perguntaEncontrada['id']; ?></td>
-            <td><?php echo $perguntaEncontrada['questao']; ?></td>
-            <td><?php echo $perguntaEncontrada['A']; ?></td>
-            <td><?php echo $perguntaEncontrada['B']; ?></td>
-            <td><?php echo $perguntaEncontrada['C']; ?></td>
-            <td><?php echo $perguntaEncontrada['D']; ?></td>
-            <td><?php echo $perguntaEncontrada['resposta']; ?></td>
-        </tr>
-        <?php else: ?>
+    <!-- Tabela de perguntas encontradas -->
+    <div class="tabela">
+        <table>
             <tr>
-                <td colspan="5">Nenhuma pergunta encontrado</td>
+                <th>Id</th>
+                <th>Questão</th>
+                <th>Letra A</th>
+                <th>Letra B</th>
+                <th>Letra C</th>
+                <th>Letra D</th>
+                <th>Resposta</th>
             </tr>
-        <?php endif; ?>
-    </table>
+            <?php if (!empty($perguntaEncontrada)): ?>
+            <tr>
+                <td><?php echo $perguntaEncontrada['id']; ?></td>
+                <td><?php echo $perguntaEncontrada['questao']; ?></td>
+                <td><?php echo $perguntaEncontrada['A']; ?></td>
+                <td><?php echo $perguntaEncontrada['B']; ?></td>
+                <td><?php echo $perguntaEncontrada['C']; ?></td>
+                <td><?php echo $perguntaEncontrada['D']; ?></td>
+                <td><?php echo $perguntaEncontrada['resposta']; ?></td>
+            </tr>
+            <?php else: ?>
+                <tr>
+                    <td colspan="7">Nenhuma pergunta encontrado</td>
+                </tr>
+            <?php endif; ?>
+        </table>
+    </div>
 
 </body>
 </html>

@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #f3f4f6, #d1d5db);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 40px;
+    border-radius: 10px;
+}
+
+.tabela {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #000;
+}
+
+a.btn-criar,
+.btn-excluir,
+.btn-alterar,
+.bnt-salvaAlteracao,
+.bnt-confirmaExclusao,
+.bnt-criarPerguntas {
+    padding: 0.30rem 0.50rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    text-decoration: none;
+    color: white;
+}
+
+a.btn-criar {
+    background-color: #007BFF;
+}
+
+a.btn-criar:hover {
+    background-color: #0067d4;
+}
+
+.btn-excluir {
+    background-color: #dd1313;
+}
+
+.btn-excluir:hover {
+    background-color: #bb1919;
+}
+
+.btn-alterar {
+    background-color: #ddb513;
+    margin-right: 5px;
+}
+
+.btn-alterar:hover {
+    background-color: #bd9d19;
+}
+
+.bnt-salvaAlteracao,
+.bnt-confirmaExclusao,
+.bnt-criarPerguntas {
+    background-color: #c4c4c3;
+    margin-top: 10px;
+    padding: 0.50rem 0.85rem;
+    font-size: 1rem;
+}
+
+.bnt-salvaAlteracao:hover,
+.bnt-confirmaExclusao:hover,
+.bnt-criarPerguntas:hover {
+    background-color: #a9a9a9;
+}
+
+.close {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 0.30rem 0.50rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #c4c4c3;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 5px;
+    text-decoration: none   ;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.close:hover {
+    background-color: #a9a9a9;
+}
+
+.bnt-buscar, 
+.bnt-cadastra {
+    background-color: #007BFF; 
+    color: white;              
+    padding: 0.30rem 0.50rem;  
+    border: none;              
+    border-radius: 5px;       
+    font-size: 0.9rem;          
+    font-weight: 600;         
+    cursor: pointer;          
+    transition: background-color 0.3s ease-in-out; 
+}
+
+.bnt-buscar:hover,
+.bnt-cadastra:hover {
+    background-color: #0067d4; 
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal:target {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    text-align: center;
+}
+
+.voltar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h3 {
+    text-align: center;
+    color: #333;
+}
+
+button {
+    width: 100%;
+    padding: 0.50rem 0.85rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    box-shadow: none;
+    background-color: #0056b3;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"] {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.forms {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+li {
+    display: flex;
+    justify-content: center;
+}
