@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Cadastro de Aluno</title>
 </head>
 <body>
     
-    <form action="" method="get" id="formsAluno">
+    <form id="formsAluno">
         <label>Nome</label>
-        <input type="text" id="nome">
-        <label>Matricula</label>
-        <input type="text" id="matricula">
+        <input type="text" id="nome" required>
+        <label>Matrícula</label>
+        <input type="text" id="matricula" required>
         <label>Senha</label>
-        <input type="password" id="senha"> 
-        <input type="button" value="Inserir" onclick="EnviarAluno();">
+        <input type="password" id="senha" required> 
+        <button type="submit" id="submitButton">Inserir</button>
     </form>
 
     <script src="javascript.js"></script>
