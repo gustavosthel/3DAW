@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista um Aluno</title>
+    <link rel="stylesheet" href="estilizacao.css">
+</head>
+<body>
+
+    <div class="voltar">
+        <a href="http://localhost/3DAW/exercicio7/menu.html"><button>Voltar</button></a>
+    </div>
+
+    <!-- Formulário para buscar uma pergunta pelo id -->
+    <form id="buscarPergunta" class="forms">
+        <label>Buscar pergunta pelo ID</label><br>
+        <input type="text" name="idBuscar" id="idPergunta" required>
+        <input type="submit" name="buscar" class="bnt-buscar" value="Buscar">
+    </form>
+
+    <!-- Tabela de perguntas encontradas -->
+    <div class="container">
+        <div class="tabela">
+            <h2>Pergunta Encontrada</h2>
+            <table id="tabela-perguntas">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Questão</th>
+                        <th>Letra A</th>
+                        <th>Letra B</th>
+                        <th>Letra C</th>
+                        <th>Letra D</th>
+                        <th>Resposta</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- O conteúdo será inserido via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal de alterar -->
+    <div id="alterarPergunta" class="modal">
+        <div class="modal-content">
+            <h3>Alterar Pergunta</h3>
+            <form id="form-alterar-pergunta">
+                <input type="hidden" id="alterar-id" name="id">
+                <input type="text" id="alterar-questao" name="novaPergunta" placeholder="Digite qual será a questão" required><br>
+                <input type="text" id="alterar-opcaoA" name="novaOpcaoA" placeholder="Digite a opção da letra A" required><br>
+                <input type="text" id="alterar-opcaoB" name="novaOpcaoB" placeholder="Digite a opção da letra B" required><br>
+                <input type="text" id="alterar-opcaoC" name="novaOpcaoC" placeholder="Digite a opção da letra C" required><br>
+                <input type="text" id="alterar-opcaoD" name="novaOpcaoD" placeholder="Digite a opção da letra D" required><br>
+                
+                <h3>Escolher o Gabarito</h3>
+                <label>Opção A</label>
+                <input type="radio" id="alterar-respostaA" value="A" name="novaOpcaoCerta"><br>
+                <label>Opção B</label>
+                <input type="radio" id="alterar-respostaB" value="B" name="novaOpcaoCerta"><br>
+                <label>Opção C</label>
+                <input type="radio" id="alterar-respostaC" value="C" name="novaOpcaoCerta"><br>
+                <label>Opção D</label>
+                <input type="radio" id="alterar-respostaD" value="D" name="novaOpcaoCerta"><br>
+
+                <input type="submit" name="confirmarAlteracoes" class=" bnt-salvaAlteracao" value="Salvar Alterações">
+                <a class="close" onclick="fecharModalAlterar()">Fechar</a>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de excluir -->
+    <div id="excluirPergunta" class="modal">
+        <div class="modal-content">
+            <h3 id="exibir-id">Tem certeza que deseja excluir a pergunta com o Id: ?</h3>
+            <form id="form-excluir-pergunta">
+                <input type="hidden" name="idExcluirConfirmada" id="idExcluir">
+                <input type="submit" name="confirmarExclusao" class="bnt-confirmaExclusao" value="Confirmar Exclusão">
+                <a class="close" onclick="fecharModalExcluir()">Fechar</a>
+            </form>
+        </div>
+    </div>
+
+    <script src="listaUmaPergunta.js"></script>
+
+</body>
+</html>

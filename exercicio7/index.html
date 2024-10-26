@@ -3,21 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Cadastro de Aluno</title>
+    <link rel="stylesheet" href="estilizacao.css">
+    <title>Cadastro</title>
 </head>
 <body>
-    
-    <form id="formsAluno">
-        <label>Nome</label>
-        <input type="text" id="nome" required>
-        <label>Matrícula</label>
-        <input type="text" id="matricula" required>
-        <label>Senha</label>
-        <input type="password" id="senha" required> 
-        <button type="submit" id="submitButton">Inserir</button>
+    <form class="forms" id="formsUsuario">
+        <h3>Realize o Cadastro</h3>
+        <input type="text" id="nome" name="nome" placeholder="Nome" required>
+        <input type="text" id="email" name="email" placeholder="Email" required>
+        <input type="password" id="senha" name="senha" placeholder="Senha" required>
+        <input type="submit" class="bnt-cadastra" value="Cadastrar">
     </form>
-
-    <script src="javascript.js"></script>
+    <script src="cadastro.js"></script>
 </body>
 </html>
